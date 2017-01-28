@@ -18,7 +18,7 @@
         2) 위치 초기화버튼을 통해 textfield 위치 초기화
 ### 이슈
     - textField의 움직임이 사용자의 터치(혹은 마우스)의 이동을 따라가지 못함
-    >`    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+`    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch: UITouch! = touches.first! as UITouch
         location = touch.location(in: self.view)
 
