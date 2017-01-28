@@ -81,4 +81,4 @@
 ![이미지10](https://github.com/BoostCamp/WeCan_MemeMe_JanghoHan/blob/master/images/picture10.png)
 
 ### 영상
-@[video](https://www.youtube.com/watch?v=Ps1BOg9D8v0&feature=youtu.be)
+[![video](http://img.youtube.com/vi/Ps1BOg9D8v0/0.jpg)](https://www.youtube.com/watch?v=Ps1BOg9D8v0&feature=youtu.be)
