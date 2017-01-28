@@ -5,6 +5,7 @@
  - 기본 기능 수정
  - KICK
  - 이슈
+ - 스크린샷
  - 영상
 
 ---
@@ -44,17 +45,17 @@
         }
 
 
-    그래서 `UIPanGestureRecognizer`를 전달인자로 받는 메서드를 작성하고, 
-    `textField.addGestureRecognizer(gesture)`
-    `textField.isUserInteractionEnabled = true`로 설정하여 문제를 해결하였다.
+ 그래서 `UIPanGestureRecognizer`를 전달인자로 받는 메서드를 작성하고, 
+ `textField.addGestureRecognizer(gesture)`
+ `textField.isUserInteractionEnabled = true`로 설정하여 문제를 해결하였다.
 
-    - textField가 두 개가 있고, 각각 textField는 독립적으로 움직여야 한다.
-    `UIPanGestureRecognizer`를 전달인자로 받는 메서드를 topTextField, bottomTextField용 두개를 만들어 각각 적용
+- textField가 두 개가 있고, 각각 textField는 독립적으로 움직여야 한다.
+ `UIPanGestureRecognizer`를 전달인자로 받는 메서드를 topTextField, bottomTextField용 두개를 만들어 각각 적용
 
-    - topTextField는 키보드를 불러올 시 화면 밖으로 삐져나가버린다.
-    > `textField.isEditing`으로 해당 textField가 편집중인지 확인한 후
-    > `textField.frame.maxY > keyboardHeight`인지 체크하고
-    > `true`이면 화면 이동, `false`이면 이동X
+- topTextField는 키보드를 불러올 시 화면 밖으로 삐져나가버린다.
+ `textField.isEditing`으로 해당 textField가 편집중인지 확인한 후
+ `textField.frame.maxY > keyboardHeight`인지 체크하고
+ `true`이면 화면 이동, `false`이면 이동X
 
 ### 영상
     
