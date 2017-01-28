@@ -69,6 +69,7 @@ UINavigationControllerDelegate, UITextFieldDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        shareButton.isEnabled = false
         //텍스트필드의 위치 저장
         setTextFieldLocation()
     }
@@ -94,7 +95,6 @@ UINavigationControllerDelegate, UITextFieldDelegate{
         buttomTextField.textAlignment = .center
         topTextField.textAlignment = .center
         //init button
-        shareButton.isEnabled = false
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
     }
     
@@ -217,13 +217,13 @@ UINavigationControllerDelegate, UITextFieldDelegate{
         var sharingItems = [AnyObject]()
         sharingItems.append(memedImage)
         let activityViewController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
-        activityViewController.completionWithItemsHandler = {(str, saved, items, error) in
-            if saved{
-                //저장하기 구현하기.
-            }
-        }
+//        activityViewController.completionWithItemsHandler = {(str, saved, items, error) in
+//            if !saved{
+//                            }
+//        }
+        self.save()
+
         present(activityViewController, animated: true, completion: nil)
-        save()
         navigationController?.popToRootViewController(animated: true)
     }
     
@@ -303,7 +303,7 @@ UINavigationControllerDelegate, UITextFieldDelegate{
         if imagePickerView.image != nil{
             imagePickerView.image = nil
             prevViewButton.title = "MoveBack"
-            //shareButton.isEnabled = false
+            shareButton.isEnabled = false
         }else{
             navigationController?.popToRootViewController(animated: true)
         }
