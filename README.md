@@ -80,4 +80,5 @@
 ![이미지9](https://github.com/BoostCamp/WeCan_MemeMe_JanghoHan/blob/master/images/picture9.png)
 ![이미지10](https://github.com/BoostCamp/WeCan_MemeMe_JanghoHan/blob/master/images/picture10.png)
 
-    
+### 영상
+[youtube:Ps1BOg9D8v0]
