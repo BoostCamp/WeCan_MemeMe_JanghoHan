@@ -27,6 +27,7 @@ UINavigationControllerDelegate, UITextFieldDelegate{
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var resetLocationButton: UIBarButtonItem!
+    @IBOutlet weak var prevViewButton: UIBarButtonItem!
 
     //store textfield's location
     var location = CGPoint(x: 0, y: 0)
@@ -198,6 +199,7 @@ UINavigationControllerDelegate, UITextFieldDelegate{
             imagePickerView.image = image
             dismiss(animated: true, completion: nil)
             shareButton.isEnabled = true
+            prevViewButton.title = "Remove Image"
         }else{
             print("error!!")
         }
@@ -295,6 +297,18 @@ UINavigationControllerDelegate, UITextFieldDelegate{
         (UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
         print("count in editorviewcontroller : \((UIApplication.shared.delegate as! AppDelegate).memes.count)")
     }
+    
+    // MARK: show prev viewcontroller state
+    @IBAction func showPrevViewState(_ sender: Any) {
+        if imagePickerView.image != nil{
+            imagePickerView.image = nil
+            prevViewButton.title = "MoveBack"
+            //shareButton.isEnabled = false
+        }else{
+            navigationController?.popToRootViewController(animated: true)
+        }
+    }
+    
 }
 
 

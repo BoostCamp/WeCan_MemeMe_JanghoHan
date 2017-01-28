@@ -94,7 +94,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wCm-Zh-lbf" firstAttribute="top" secondItem="4pR-6d-rwj" secondAttribute="bottom" constant="44" id="7uD-lu-KCF"/>
                             <constraint firstItem="4pR-6d-rwj" firstAttribute="leading" secondItem="fVO-xw-f5I" secondAttribute="leadingMargin" constant="-16" id="ilF-3Q-Pm4"/>
@@ -200,9 +200,9 @@
                                 <action selector="shareImage:" destination="BYZ-38-t0r" id="wFl-1i-bcr"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="pYy-6f-nhy">
+                        <barButtonItem key="rightBarButtonItem" title="MoveBack" id="pYy-6f-nhy">
                             <connections>
-                                <action selector="dismissImage:" destination="BYZ-38-t0r" id="vNA-8E-wqI"/>
+                                <action selector="showPrevViewState:" destination="BYZ-38-t0r" id="wza-n5-hQi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -213,6 +213,7 @@
                         <outlet property="imagePickerView" destination="1nr-FD-tcc" id="7G7-SU-bmF"/>
                         <outlet property="innerView" destination="8fN-C9-Z0x" id="Uy7-43-BFR"/>
                         <outlet property="navBar" destination="Quh-7j-Tkb" id="QhV-i4-rbZ"/>
+                        <outlet property="prevViewButton" destination="pYy-6f-nhy" id="8zz-8E-8Sx"/>
                         <outlet property="resetLocationButton" destination="0M0-xq-VWh" id="Cfe-G4-Jwp"/>
                         <outlet property="shareButton" destination="YEC-b2-Byc" id="aRs-Tf-prn"/>
                         <outlet property="toolBar" destination="SJQ-Ct-4fX" id="utB-M8-oyK"/>
