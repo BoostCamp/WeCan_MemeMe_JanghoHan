@@ -1,6 +1,7 @@
 # WeCan_MemeMe_JanghoHan
+
 # MemeMe
-1. 기본기능
+
 ## 목차
  - 기본 기능 수정
  - KICK
@@ -28,6 +29,8 @@
 ### 이슈
  - textField의 움직임이 사용자의 터치(혹은 마우스)의 이동을 따라가지 못함
 
+ 아래의 코드로 작성했었으나
+
         override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             let touch: UITouch! = touches.first! as UITouch
             location = touch.location(in: self.view)
@@ -49,6 +52,8 @@
             }
         }
 
+
+ 앞서 언급한 문제점이 발생했다.
 
  그래서 `UIPanGestureRecognizer`를 전달인자로 받는 메서드를 작성하고, 
 
