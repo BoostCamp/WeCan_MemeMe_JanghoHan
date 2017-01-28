@@ -21,7 +21,8 @@
 
 ### 이슈
  - textField의 움직임이 사용자의 터치(혹은 마우스)의 이동을 따라가지 못함
-`    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+    `override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch: UITouch! = touches.first! as UITouch
         location = touch.location(in: self.view)
 
@@ -41,6 +42,7 @@
             topTextField.center = location
         }
     }`
+
     그래서 `UIPanGestureRecognizer`를 전달인자로 받는 메서드를 작성하고, 
     `textField.addGestureRecognizer(gesture)`
     `textField.isUserInteractionEnabled = true`로 설정하여 문제를 해결하였다.
